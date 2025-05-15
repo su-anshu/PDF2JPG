@@ -2,13 +2,13 @@ echo off
 echo.
 echo.
 
-set DPI=300
-set ALPHABITS=2
-set QUALITY=80
+set DPI=600
+set ALPHABITS=4
+set QUALITY=100
 set FIRSTPAGE=1
 set LASTPAGE=9999
 REM MEMORY in MB
-set MEMORY=300
+set MEMORY=1024
 
 cd /D %~dp1
 
@@ -17,7 +17,7 @@ set JPGFILE=%PDFFILE:.pdf=-%%%d.jpg
 
 set GS=%2
 IF "%GS%" == "" (
-	set GS=bin\gswin32c.exe
+	set GS=bin\gswin64c.exe
 )
 
 echo Loading %GS%...
